@@ -33,6 +33,7 @@ class Account(BaseModel):
     transactions: list[Transaction]
     portfolio_value_time_series: list[tuple[str, float]]
 
+    # get class method creates an instance of Account class with specific kwargs (*fields)
     @classmethod
     def get(cls, name: str):
         fields = read_account(name.lower())

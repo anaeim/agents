@@ -183,3 +183,4 @@ cython_debug/
 6_mcp/memory/*.db
 
 test*.ipynb
+/sandbox/*

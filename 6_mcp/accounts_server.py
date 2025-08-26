@@ -1,3 +1,4 @@
+import datetime
 from mcp.server.fastmcp import FastMCP
 from accounts import Account
 
@@ -55,6 +56,24 @@ async def change_strategy(name: str, strategy: str) -> str:
         strategy: The new strategy for the account
     """
     return Account.get(name).change_strategy(strategy)
+
+@mcp.tool()
+async def print_my_name(name: str) -> str:
+    """Print the name of the account holder.
+
+    Args:
+        name: The name of the account holder
+    """
+    return f"My name is {name}"
+
+@mcp.tool()
+async def print_today_date() -> str:
+    """Print today's date.
+
+    Args:
+        name: The name of the account holder
+    """
+    return f"Today's date is {datetime.now().strftime('%Y-%m-%d')}"
 
 @mcp.resource("accounts://accounts_server/{name}")
 async def read_account_resource(name: str) -> str:
