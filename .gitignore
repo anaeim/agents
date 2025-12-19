@@ -185,3 +185,5 @@ cython_debug/
 test*.ipynb
 /sandbox/*
 .gradio/
+
+test*.ipynb
