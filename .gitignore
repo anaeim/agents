@@ -187,3 +187,5 @@ test*.ipynb
 .gradio/
 
 test*.ipynb
+
+codes/
